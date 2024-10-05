@@ -55,7 +55,7 @@ async function downloadSessionData() {
         console.error('Please add your session to SESSION_ID env !!');
         return false;
     }
-    const sessdata = config.SESSION_ID.split("MALIK-MD&")[1];
+    const sessdata = config.SESSION_ID.split("Kurapi-bot&")[1];
     const url = `https://pastebin.com/raw/${sessdata}`;
     try {
         const response = await axios.get(url);
@@ -73,20 +73,20 @@ async function start() {
     try {
         const { state, saveCreds } = await useMultiFileAuthState(sessionDir);
         const { version, isLatest } = await fetchLatestBaileysVersion();
-        console.log(`🤖 MALIK-MD using WA v${version.join('.')}, isLatest: ${isLatest}`);
+        console.log(`🤖 Kurapi-bot using WA v${version.join('.')}, isLatest: ${isLatest}`);
         
         const Matrix = makeWASocket({
             version,
             logger: pino({ level: 'silent' }),
             printQRInTerminal: useQR,
-            browser: ["MALIK-MD", "safari", "3.3"],
+            browser: ["Kurapi-bot", "safari", "3.3"],
             auth: state,
             getMessage: async (key) => {
                 if (store) {
                     const msg = await store.loadMessage(key.remoteJid, key.id);
                     return msg.message || undefined;
                 }
-                return { conversation: "MALIK-MD whatsapp user bot" };
+                return { conversation: "Kurapi-bot whatsapp user bot" };
             }
         });
 
