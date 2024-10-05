@@ -1,15 +1,15 @@
 {
-  "name": "MALIK-MD",
+  "name": "Kurapi-bot",
   "version": "1.0.0",
-  "description": "MALIK-MD latest multi device whatsapp bot",
+  "description": "Kurapi-bot latest multi device whatsapp bot",
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "pm2 start index.js --deep-monitoring --attach --name MALIK-MD",
-    "stop": "pm2 stop MALIK-MD",
-    "restart": "pm2 restart MALIK-MD"
+    "start": "pm2 start index.js --deep-monitoring --attach --name Kurapi-bot",
+    "stop": "pm2 stop Kurapi-bot",
+    "restart": "pm2 restart Kurapi-bot"
   },
-  "keywords": ["malik-md", "whatsapp-bot", "whatsapp md bot"],
+  "keywords": ["Kurapi-bot", "whatsapp-bot", "whatsapp md bot"],
   "author": "arkhan998",
   "license": "ISC",
   "dependencies": {
